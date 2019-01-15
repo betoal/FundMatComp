@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="generator" content="MediaWiki 1.16alpha-wmf">
+		<meta name="keywords" content="Extended precision,Arbitrary-precision arithmetic,C (programming language),Coprocessor,Decimal128 floating-point format,Decimal32 floating-point format,Decimal64 floating-point format,Double precision,Double precision floating-point format,Excess-N,Floating point">
+		<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;action=edit">
+		<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;action=edit">
+		<link rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png">
+		<link rel="shortcut icon" href="http://en.wikipedia.org/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+		<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+		<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=rss">
+		<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+		<title>Extended precision - Wikipedia, the free encyclopedia</title>
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/shared.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/commonPrint.css" type="text/css" media="print">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/main_002.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/main.css" type="text/css" media="handheld">
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE50Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE55Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins-1.5/monobook/IE60Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins-1.5/monobook/IE70Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index_003.css" type="text/css">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index_005.css" type="text/css" media="print">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index_002.css" type="text/css" media="handheld">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index_004.css" type="text/css">
+		<link rel="stylesheet" href="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.css" type="text/css">
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?233zz2"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type="text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins-1.5";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "/w";
+		var wgScript = "/w/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://en.wikipedia.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Extended_precision";
+		var wgTitle = "Extended precision";
+		var wgAction = "view";
+		var wgArticleId = "7186253";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = 313148406;
+		var wgVersion = "1.16alpha-wmf";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgMainPageTitle = "Main Page";
+		var wgMWSuggestTemplate = "http://en.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest";
+		var wgDBname = "enwiki";
+		var wgSearchNamespaces = [0];
+		var wgMWSuggestMessages = ["with suggestions", "no suggestions"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikibits.js"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/ajax.js"></script>
+		<script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/mwsuggest.js"></script>
+		<script type="text/javascript">/*<![CDATA[*/
+		var wgNotice='';var wgNoticeLocal='';
+		/*]]>*/</script>
+		<script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/centralnotice.js"></script><style type="text/css">
+#centralNotice .siteNoticeSmall{display:none;}
+#centralNotice .siteNoticeSmallAnon{display:none;}
+#centralNotice .siteNoticeSmallUser{display:none;}
+#centralNotice.collapsed .siteNoticeBig{display:none;}
+#centralNotice.collapsed .siteNoticeSmall{display:block;}
+#centralNotice.collapsed .siteNoticeSmallUser{display:block;}
+#centralNotice.collapsed .siteNoticeSmallAnon{display:block;}
+#centralNotice.anonnotice .siteNoticeSmallUser{display:none !important;}
+#centralNotice.usernotice .siteNoticeSmallAnon{display:none !important;}
+</style>
+<style type="text/css">
+#centralNotice .siteNoticeSmall{display:none;}
+#centralNotice .siteNoticeSmallAnon{display:none;}
+#centralNotice .siteNoticeSmallUser{display:none;}
+#centralNotice.collapsed .siteNoticeBig{display:none;}
+#centralNotice.collapsed .siteNoticeSmall{display:block;}
+#centralNotice.collapsed .siteNoticeSmallUser{display:block;}
+#centralNotice.collapsed .siteNoticeSmallAnon{display:block;}
+#centralNotice.anonnotice .siteNoticeSmallUser{display:none !important;}
+#centralNotice.usernotice .siteNoticeSmallAnon{display:none !important;}
+</style>
+
+
+		<script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.txt"><!-- site js --></script><script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.php"></script><script type="text/javascript" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index_002.txt"></script>
+	</head><body class="mediawiki ltr ns-0 ns-subject page-Extended_precision skin-monobook">
+	<div id="globalWrapper"><div style="position: absolute; z-index: 40; left: 155px; top: 1px; clear: both; float: left; font-size: 90%; font-style: italic; white-space: nowrap;" class="noprint" id="anon-banner"><a href="http://wikimediafoundation.org/wiki/Donate/Now/en?utm_source=enwiki_01&amp;utm_medium=anon_donation_banner&amp;utm_campaign=spontaneous_donation" class="extiw" title="foundation:Fundraising"><b>Make a donation</b></a> to Wikipedia and give the gift of knowledge!</div><div style="position: absolute; z-index: 40; left: 155px; top: 1px; clear: both; float: left; font-size: 90%; font-style: italic; white-space: nowrap;" class="noprint" id="anon-banner">Help us improve Wikipedia by <a href="http://wikimediafoundation.org/wiki/Donate/Now/en?utm_source=enwiki_03&amp;utm_medium=anon_donation_banner&amp;utm_campaign=spontaneous_donation" class="extiw" title="foundation:Fundraising"><b>supporting it financially</b></a>.</div>
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type="text/javascript">if (wgNotice != '') document.writeln(wgNotice);</script></div>		<h1 id="firstHeading" class="firstHeading">Extended precision</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table class="infobox" style="text-align: left; font-size: 90%;">
+<tbody><tr style="background: rgb(204, 204, 255) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;">
+<th><a href="http://en.wikipedia.org/wiki/IEEE_754-2008" title="IEEE 754-2008">IEEE 754</a> <a href="http://en.wikipedia.org/wiki/Floating_point" title="Floating point">floating point</a> <a href="http://en.wikipedia.org/wiki/Precision_%28computer_science%29" title="Precision (computer science)">precisions</a></th>
+</tr>
+<tr style="">
+<td>
+<p>16-bit: <a href="http://en.wikipedia.org/wiki/Half_precision_floating-point_format" title="Half precision floating-point format">Half</a> (binary16)<br>
+32-bit: <a href="http://en.wikipedia.org/wiki/Single_precision_floating-point_format" title="Single precision floating-point format">Single</a> (binary32), <a href="http://en.wikipedia.org/wiki/Decimal32_floating-point_format" title="Decimal32 floating-point format">decimal32</a><br>
+64-bit: <a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format" title="Double precision floating-point format">Double</a> (binary64), <a href="http://en.wikipedia.org/wiki/Decimal64_floating-point_format" title="Decimal64 floating-point format">decimal64</a><br>
+128-bit: <a href="http://en.wikipedia.org/wiki/Quadruple_precision_floating-point_format" title="Quadruple precision floating-point format">Quadruple</a> (binary128), <a href="http://en.wikipedia.org/wiki/Decimal128_floating-point_format" title="Decimal128 floating-point format">decimal128</a><br></p>
+</td>
+</tr>
+</tbody></table>
+<p>The term <i><b>extended precision</b></i> refers to storage formats for <a href="http://en.wikipedia.org/wiki/Floating_point" title="Floating point">floating point</a>
+numbers not falling into the regular sequence of single, double, and
+quadruple precision formats (usually 32-bit, 64-bit and 128-bit,
+respectively). In contrast to <i>extended precision</i>, <a href="http://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">arbitrary-precision arithmetic</a>
+refers to implementations of much larger numeric types (with a storage
+count that usually is not a power of two) using special software (or,
+rarely, hardware).</p>
+<p>The most common extended-precision format is currently the 80-bit format first used in the <a href="http://en.wikipedia.org/wiki/Intel_8087" title="Intel 8087">Intel 8087</a> math <a href="http://en.wikipedia.org/wiki/Coprocessor" title="Coprocessor">coprocessor</a> (and later in the <a href="http://en.wikipedia.org/wiki/Motorola_68881" title="Motorola 68881">Motorola 68881</a>), which has since become ubiquitous on the <a href="http://en.wikipedia.org/wiki/X86_architecture" title="X86 architecture" class="mw-redirect">x86 architecture</a>. This 80-bit format was standardized by the <a href="http://en.wikipedia.org/wiki/IEEE_754" title="IEEE 754" class="mw-redirect">IEEE floating-point standard</a>
+and uses 64 bits for the significand, 15 bits for the exponent field
+and one bit for the sign of the significand. The exponent field uses <a href="http://en.wikipedia.org/wiki/Excess-N" title="Excess-N" class="mw-redirect">Excess-N</a>
+representation, to be more exact Excess-16383, meaning that 16383 has
+to be subtracted from the written exponent. An exponent field value of
+32767 (all fifteen bits <b>1</b>) is reserved so as to enable the representation of special states such as <a href="http://en.wikipedia.org/wiki/Infinity" title="Infinity">Infinity</a> and <a href="http://en.wikipedia.org/wiki/NaN" title="NaN">Not a Number</a>. For historical reasons, this format has no implicit/<a href="http://en.wikipedia.org/wiki/Hidden_bit" title="Hidden bit" class="mw-redirect">hidden bit</a>: the explicit bit was used in the <a href="http://en.wikipedia.org/wiki/Intel_8087" title="Intel 8087">Intel 8087</a> to suppress the normalization of <a href="http://en.wikipedia.org/wiki/Subnormal_numbers" title="Subnormal numbers" class="mw-redirect">subnormal numbers</a> in certain cases.</p>
+<p>The opportunity for extended precision arises because, on the one
+hand, a number format should fit into a whole number of storage words
+but must pack in both the mantissa and exponent, and, on the other
+hand, the hardware performing the arithmetic almost certainly will also
+be used for integer arithmetic where there is no exponent part. The
+64-bit double precision format allows 53 bits for the mantissa and 11
+for the exponent, but the hardware also allows 64-bit integer
+arithmetic. With trivial additional circuitry, it could therefore be
+generalized to perform floating-point arithmetic on a mantissa of 64
+bits, and this additional precision might be useful. But that leaves no
+room for an exponent, so an additional word of storage is taken (16
+bits), for a total of 80 bits or five words. Subtle differences in the
+behaviour of the arithmetic (in this case) are a side effect. <a href="http://en.wikipedia.org/wiki/File:Extended_Floating_Point_Format.svg" class="image" title="Image:Extended Floating Point Format.svg"><img alt="Image:Extended Floating Point Format.svg" src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/762px-Extended_Floating_Point_Format.png" height="125" width="762"></a></p>
+<p>80-bit floating point arithmetic was introduced well after the
+development of most computer languages, which often offer only the
+common 32- and 64-bit floating point sizes. However, on the <a href="http://en.wikipedia.org/wiki/X86_architecture" title="X86 architecture" class="mw-redirect">x86 architecture</a> most <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29" title="C (programming language)">C</a> compilers support 80-bit extended precision via the <a href="http://en.wikipedia.org/wiki/Long_double" title="Long double">long double</a>
+type. Compilers on x86 for other languages often support extended
+precision as well, sometimes via nonstandard extensions: for example, <a href="http://en.wikipedia.org/wiki/Turbo_Pascal" title="Turbo Pascal">Turbo Pascal</a> offers an <code>extended</code> type, and several <a href="http://en.wikipedia.org/wiki/Fortran" title="Fortran">Fortran</a> compilers have a <code>REAL*10</code> type (analogous to REAL*4 and REAL*8). (Such compilers also typically include extended-precision mathematical <a href="http://en.wikipedia.org/wiki/Subroutines" title="Subroutines" class="mw-redirect">subroutines</a>, such as <a href="http://en.wikipedia.org/wiki/Square_root" title="Square root">square root</a> and <a href="http://en.wikipedia.org/wiki/Trigonometric_function" title="Trigonometric function" class="mw-redirect">trigonometric functions</a>, in their standard <a href="http://en.wikipedia.org/wiki/Library_%28computer_science%29" title="Library (computer science)" class="mw-redirect">libraries</a>.)</p>
+<p>Older machines used a variety of formats. On an <a href="http://en.wikipedia.org/wiki/IBM_1130" title="IBM 1130">IBM 1130</a>, "extended precision" referred to a floating-point format that offered a 32-bit <a href="http://en.wikipedia.org/wiki/Significand" title="Significand">significand or mantissa</a> (corresponding to the 32-bit <a href="http://en.wikipedia.org/wiki/Two%27s_complement" title="Two's complement">two's complement</a> <a href="http://en.wikipedia.org/wiki/Integer" title="Integer">integer</a>
+arithmetic of the CPU) for a floating-point number, an extension on the
+normal 24-bit significand of its standard 32-bit floating-point format.
+Floating-point arithmetic operations were performed by software, and <a href="http://en.wikipedia.org/wiki/Double_precision" title="Double precision" class="mw-redirect">double precision</a> was not supported at all. The extended format occupied three 16-bit words, with the extra space simply ignored.</p>
+<p><br></p>
+<p><a name="See_also" id="See_also"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;action=edit&amp;section=1" title="Edit section: See also">edit</a>]</span> <span class="mw-headline">See also</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Floating_point" title="Floating point">Floating point</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Half_precision" title="Half precision" class="mw-redirect">Half precision</a> – <a href="http://en.wikipedia.org/wiki/Single_precision" title="Single precision" class="mw-redirect">Single precision</a> – <a href="http://en.wikipedia.org/wiki/Double_precision" title="Double precision" class="mw-redirect">Double precision</a> – Extended precision – <a href="http://en.wikipedia.org/wiki/Quadruple_precision" title="Quadruple precision" class="mw-redirect">Quadruple precision</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IEEE_754-1985" title="IEEE 754-1985">IEEE floating-point standard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">Arbitrary-precision arithmetic</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/1000000
+Post-expand include size: 660/2048000 bytes
+Template argument size: 0/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:7186253-0!1!0!default!!en!2 and timestamp 20090911071110 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/Extended_precision">http://en.wikipedia.org/wiki/Extended_precision</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Computer_arithmetic" title="Category:Computer arithmetic">Computer arithmetic</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Hidden categories: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_sources_%28Erik9bot%29" title="Category:Articles lacking sources (Erik9bot)">Articles lacking sources (Erik9bot)</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul xml:lang="en" lang="en">
+	
+				 <li id="ca-nstab-main" class="selected"><a href="http://en.wikipedia.org/wiki/Extended_precision" title="View the content page [alt-c]" accesskey="c">Article</a></li>
+				 <li id="ca-talk"><a href="http://en.wikipedia.org/wiki/Talk:Extended_precision" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;action=edit" title="You can edit this page. 
+Please use the preview button before saving. [alt-e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;action=history" title="Past versions of this page [alt-h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul xml:lang="en" lang="en">
+				<li id="pt-acaibeta"><a href="http://en.wikipedia.org/w/index.php?title=Special:UsabilityInitiativeOptIn&amp;from=Extended_precision" class="no-text-transform">Try Beta</a></li>
+				<li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Extended_precision" title="You are encouraged to log in; however, it is not mandatory. [alt-o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5 xml:lang="en" lang="en">Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-z]" accesskey="z">Main page</a></li>
+				<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+				<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content — the best of Wikipedia">Featured content</a></li>
+				<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-x]" accesskey="x">Random article</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5 xml:lang="en" lang="en"><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform"><div>
+				<input name="title" value="Special:Search" type="hidden">
+				<input autocomplete="off" id="searchInput" name="search" title="Search Wikipedia [alt-f]" accesskey="f" type="text">
+				<input name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if one exists" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search Wikipedia for this text" type="submit">
+			</div></form>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-interaction">
+		<h5 xml:lang="en" lang="en">Interaction</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+				<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [alt-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate/Now/en?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=spontaneous_donation" title="Support us">Donate to Wikipedia</a></li>
+				<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5 xml:lang="en" lang="en">Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Extended_precision" title="List of all English Wikipedia pages containing links to this page [alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Extended_precision" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:Upload" title="Upload files [alt-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="List of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Extended_precision&amp;oldid=313148406" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Extended_precision&amp;id=313148406">Cite this page</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="5_Extended%20precision%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikimedia-button.png" alt="Wikimedia Foundation" height="31" width="88"></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 11 September 2009 at 07:11.</li>
+					<li id="copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display: none;"></a>;
+additional terms may apply.
+See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.<br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+					<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+					<li id="disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv110 in 0.063 secs. --></body></html>

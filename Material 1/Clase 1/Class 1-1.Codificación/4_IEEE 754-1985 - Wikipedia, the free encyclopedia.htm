@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0057)http://en.wikipedia.org/wiki/IEEE_floating-point_standard -->
+<html dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>IEEE 754-1985 - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="IEEE 754-1985,2007,Affinely extended real number system,April 12,As of 2008,Binary numeral system,Bit,C++,C (programming language),Central processing unit,Co-processor" name="keywords"><link href="file:///favicon.ico" rel="shortcut icon"><link href="http://en.wikipedia.org/apple-touch-icon.png" rel="apple-touch-icon"><link title="Wikipedia (English)" href="file:///w/opensearch_desc.php" type="application/opensearchdescription+xml" rel="search"><link href="http://www.gnu.org/copyleft/fdl.html" rel="copyright"><link title="Wikipedia RSS Feed" href="http://en.wikipedia.org/w/index.php?title=Special:Recentchanges&amp;feed=rss" type="application/rss+xml" rel="alternate"><link title="Wikipedia Atom Feed" href="http://en.wikipedia.org/w/index.php?title=Special:Recentchanges&amp;feed=atom" type="application/atom+xml" rel="alternate">
+<style type="text/css" media="screen, projection">@import url( /skins-1.5/common/shared.css?104 );
+@import url( /skins-1.5/monobook/main.css?104 );
+</style>
+<link media="print" href="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/commonPrint.css" type="text/css" rel="stylesheet"><!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?104";</style><![endif]--><!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?104";</style><![endif]--><!--[if IE 6]>
+<STYLE type=text/css>@import url( /skins-1.5/monobook/IE60Fixes.css?104 );
+</STYLE>
+<![endif]--><!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?104";</style><![endif]--><!--[if lt IE 7]>
+<SCRIPT src="IEEE 754-1985_archivos/IEFixes.js" type=text/javascript></SCRIPT>
+
+<META http-equiv=imagetoolbar content=no><![endif]-->
+<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgServer = "http://en.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "IEEE_754-1985";
+var wgTitle = "IEEE 754-1985";
+var wgAction = "view";
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgArticleId = "15189";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "185803175";
+var wgVersion = "1.12alpha";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+/*]]>*/</script>
+
+<script src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikibits.js" type="text/javascript"><!-- wikibits js --></script>
+<!-- Head Scripts -->
+<script src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/ajax.js" type="text/javascript"></script>
+
+<script src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.txt" type="text/javascript"><!-- site js --></script><script type="text/javascript" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.php"></script>
+
+<style type="text/css">@import url( /w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400 );
+@import url( /w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400 );
+@import url( /w/index.php?title=-&action=raw&gen=css&maxage=2678400 );
+</style>
+
+<meta content="MSHTML 6.00.2900.3243" name="GENERATOR"></head>
+<body class="mediawiki ns-0 ltr page-IEEE_754-1985">
+<div id="globalWrapper">
+<div id="column-content">
+<div id="content"><a id="top" name="top"></a>
+<h1 class="firstHeading">IEEE 754-1985</h1>
+<div id="bodyContent">
+<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+<div id="contentSub">(Redirected from <a title="IEEE floating-point standard" href="http://en.wikipedia.org/w/index.php?title=IEEE_floating-point_standard&amp;redirect=no">IEEE 
+floating-point standard</a>)</div>
+<div id="jump-to-nav">Jump to: <a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#column-one">navigation</a>, 
+<a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#searchInput">search</a></div><!-- start content -->
+<p>The <b><a title="IEEE" href="http://en.wikipedia.org/wiki/IEEE">IEEE</a> 
+Standard for Binary Floating-Point Arithmetic</b> (<b>IEEE 754</b>) is the most 
+widely-used standard for <a title="Floating point" href="http://en.wikipedia.org/wiki/Floating_point">floating-point</a> 
+computation, and is followed by many <a title="Central processing unit" href="http://en.wikipedia.org/wiki/Central_processing_unit">CPU</a> and <a title="Floating point unit" href="http://en.wikipedia.org/wiki/Floating_point_unit">FPU</a> implementations. 
+The standard defines formats for representing floating-point numbers (including 
+<a title="−0 (number)" href="http://en.wikipedia.org/wiki/%C3%A2%C2%88%C2%920_%28number%29">negative zero</a> and <a title="Denormal number" href="http://en.wikipedia.org/wiki/Denormal_number">denormal numbers</a>) and 
+special values (<a title="Infinity" href="http://en.wikipedia.org/wiki/Infinity">infinities</a> and <a title="NaN" href="http://en.wikipedia.org/wiki/NaN">NaNs</a>) together with a set of 
+<i>floating-point operations</i> that operate on these values. It also specifies 
+four rounding modes and five exceptions (including when the exceptions occur, 
+and what happens when they do occur).</p>
+<p>IEEE 754 specifies four formats for representing floating-point values: 
+single-precision (32-bit), double-precision (64-bit), single-extended precision 
+(≥ 43-bit, not commonly used) and double-extended precision (≥ 79-bit, usually 
+implemented with 80 bits). Only 32-bit values are required by the standard; the 
+others are optional. Many languages specify that IEEE formats and arithmetic be 
+implemented, although sometimes it is optional. For example, the <a title="C (programming language)" href="http://en.wikipedia.org/wiki/C_%28programming_language%29">C programming 
+language</a>, which pre-dated IEEE 754, now allows but does not require IEEE 
+arithmetic (the C <tt>float</tt> typically is used for IEEE single-precision and 
+<tt>double</tt> uses IEEE double-precision).</p>
+<p>The full title of the standard is <b>IEEE Standard for Binary Floating-Point 
+Arithmetic (ANSI/IEEE Std 754-1985)</b>, and it is also known as <b>IEC 
+60559:1989, Binary floating-point arithmetic for microprocessor systems</b> 
+(originally the reference number was IEC 559:1989).<a class="external autonumber" title="http://www.opengroup.org/onlinepubs/009695399/frontmatter/refdocs.html" href="http://www.opengroup.org/onlinepubs/009695399/frontmatter/refdocs.html" rel="nofollow">[1]</a> Later there was an <b>IEEE 854-1987</b> for "radix 
+independent floating point" as long as the radix is 2 or 10.</p>
+<table class="toc" id="toc" summary="Contents">
+  <tbody>
+  <tr>
+    <td>
+      <div id="toctitle">
+      <h2>Contents</h2> <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">hide</a>]</span></div>
+      <ul>
+        <li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Anatomy_of_a_floating-point_number"><span class="tocnumber">1</span> <span class="toctext">Anatomy of a floating-point 
+        number</span></a> 
+        <ul>
+          <li class="toclevel-2"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Bit_conventions_used_in_this_article"><span class="tocnumber">1.1</span> <span class="toctext">Bit conventions used in 
+          this article</span></a> 
+          </li><li class="toclevel-2"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#General_layout"><span class="tocnumber">1.2</span> <span class="toctext">General 
+          layout</span></a> 
+          <ul>
+            <li class="toclevel-3"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Exponent_biasing"><span class="tocnumber">1.2.1</span> <span class="toctext">Exponent 
+            biasing</span></a> 
+            </li><li class="toclevel-3"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Cases"><span class="tocnumber">1.2.2</span> <span class="toctext">Cases</span></a> 
+            </li></ul>
+          </li><li class="toclevel-2"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Single-precision_32_bit"><span class="tocnumber">1.3</span> <span class="toctext">Single-precision 32 
+          bit</span></a> 
+          </li><li class="toclevel-2"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#A_more_complex_example"><span class="tocnumber">1.4</span> <span class="toctext">A more complex 
+          example</span></a> 
+          </li><li class="toclevel-2"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Double-precision_64_bit"><span class="tocnumber">1.5</span> <span class="toctext">Double-precision 64 
+          bit</span></a> </li></ul>
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Comparing_floating-point_numbers"><span class="tocnumber">2</span> <span class="toctext">Comparing floating-point 
+        numbers</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Rounding_floating-point_numbers"><span class="tocnumber">3</span> <span class="toctext">Rounding floating-point 
+        numbers</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Extending_the_real_numbers"><span class="tocnumber">4</span> <span class="toctext">Extending the real 
+        numbers</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Recommended_functions_and_predicates"><span class="tocnumber">5</span> <span class="toctext">Recommended functions and 
+        predicates</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Revision_of_the_standard"><span class="tocnumber">7</span> <span class="toctext">Revision of the 
+        standard</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a> 
+        </li><li class="toclevel-1"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a> 
+        <ul>
+          <li class="toclevel-2"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Converters_.28decimal_.E2.86.94_754_format.2C_etc..29"><span class="tocnumber">9.1</span> <span class="toctext">Converters (decimal ↔ 
+          754 format, etc.)</span></a> </li></ul></li></ul></td></tr></tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+
+<p><a id="Anatomy_of_a_floating-point_number" name="Anatomy_of_a_floating-point_number"></a></p>
+<h2><span class="editsection">[<a title="Edit section: Anatomy of a floating-point number" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=1">edit</a>]</span> 
+<span class="mw-headline">Anatomy of a floating-point number</span></h2>
+<p>Following is a description of the standard's format for floating-point 
+numbers.</p>
+<p><a id="Bit_conventions_used_in_this_article" name="Bit_conventions_used_in_this_article"></a></p>
+<h3><span class="editsection">[<a title="Edit section: Bit conventions used in this article" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=2">edit</a>]</span> 
+<span class="mw-headline">Bit conventions used in this article</span></h3>
+<p><a title="Bit" href="http://en.wikipedia.org/wiki/Bit">Bits</a> within a <a title="Word (computer science)" href="http://en.wikipedia.org/wiki/Word_%28computer_science%29">word</a> of width W 
+are indexed by <a title="Integer" href="http://en.wikipedia.org/wiki/Integer">integers</a> in the range 0 to W−1 
+<a title="Inclusive" href="http://en.wikipedia.org/wiki/Inclusive">inclusive</a>. 
+The bit with index 0 is drawn on the right. The lowest indexed bit is usually 
+the lsb (Least Significant Bit, the one that if changed would cause the smallest 
+variation of the represented value).</p>
+<p><a id="General_layout" name="General_layout"></a></p>
+<h3><span class="editsection">[<a title="Edit section: General layout" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=3">edit</a>]</span> 
+<span class="mw-headline">General layout</span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="WIDTH: 492px"><a class="image" title="The three fields in an IEEE 754 float" href="http://en.wikipedia.org/wiki/Image:General_floating_point_frac.svg"><img class="thumbimage" alt="The three fields in an IEEE 754 float" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/490px-General_floating_point_frac.png" border="0" height="75" width="490"></a> 
+<div class="thumbcaption">The three fields in an IEEE 754 float</div></div></div>
+<p>Binary floating-point numbers are stored in a <a title="Signed number representations" href="http://en.wikipedia.org/wiki/Signed_number_representations#Sign-and-magnitude">sign-magnitude</a> 
+form where the <a title="Most significant bit" href="http://en.wikipedia.org/wiki/Most_significant_bit">most significant 
+bit</a> is the <a title="Sign bit" href="http://en.wikipedia.org/wiki/Sign_bit">sign bit</a>, <i>exponent</i> is 
+the <a title="Exponent bias" href="http://en.wikipedia.org/wiki/Exponent_bias">biased</a> exponent, and 
+<i>"fraction"</i> is the <a title="Significand" href="http://en.wikipedia.org/wiki/Significand">significand</a> minus the 
+<i>most significant bit</i>.</p>
+<p><a id="Exponent_biasing" name="Exponent_biasing"></a></p>
+<h4><span class="editsection">[<a title="Edit section: Exponent biasing" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=4">edit</a>]</span> 
+<span class="mw-headline">Exponent biasing</span></h4>
+<p>The exponent is biased by 2<sup><i>e</i>−1</sup>−1. See also <a title="Signed number representations" href="http://en.wikipedia.org/wiki/Signed_number_representations#Excess-N">Excess-<i>N</i></a>. 
+Biasing is done because exponents have to be <a title="Negative and non-negative numbers" href="http://en.wikipedia.org/wiki/Negative_and_non-negative_numbers#Computing">signed 
+values</a> in order to be able to represent both tiny and huge values, but <a title="Two's complement" href="http://en.wikipedia.org/wiki/Two%27s_complement">two's complement</a>, the 
+usual representation for signed values, would make <a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#Comparing_floating-point_numbers">comparison</a> 
+harder. To solve this the exponent is biased before being stored, by adjusting 
+its value to put it within an unsigned range suitable for comparison.</p>
+<p>For example, to represent a number which has exponent of 17, <i>exponent</i> 
+is 17 + 2<sup><i>e</i>−1</sup>−1. Assuming <i>e</i> = 8, the exponent is equal 
+to 17 + 128 − 1 = 144.</p>
+<p><a id="Cases" name="Cases"></a></p>
+<h4><span class="editsection">[<a title="Edit section: Cases" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=5">edit</a>]</span> 
+<span class="mw-headline">Cases</span></h4>
+<p>The most significant bit of the <a title="Significand" href="http://en.wikipedia.org/wiki/Significand">significand</a> (not stored) is 
+determined by the value of <i>exponent</i>. If <span class="texhtml">0 &lt;</span> 
+<i>exponent</i> <span class="texhtml">&lt; 2<sup><i>e</i></sup> − 1</span>, the 
+most significant bit of the <i>significand</i> is 1, and the number is said to 
+be <i>normalized</i>. If <i>exponent</i> is 0, the most significant bit of the 
+<i>significand</i> is 0 and the number is said to be <i>de-normalized</i>. Three 
+special cases arise:</p>
+<ol>
+  <li>if <i>exponent</i> is 0 and <i>fraction</i> is 0, the number is ±0 
+  (depending on the sign bit) 
+  </li><li>if <i>exponent</i> = <span class="texhtml">2<sup><i>e</i></sup> − 1</span> 
+  and <i>fraction</i> is 0, the number is ±<a title="Infinity" href="http://en.wikipedia.org/wiki/Infinity">infinity</a> (again depending on 
+  the sign bit), and 
+  </li><li>if <i>exponent</i> = <span class="texhtml">2<sup><i>e</i></sup> − 1</span> 
+  and <i>fraction</i> is not 0, the number being represented is <a title="NaN" href="http://en.wikipedia.org/wiki/NaN">not a number (NaN)</a>. </li></ol>
+<p>This can be summarized as:</p>
+<table class="wikitable">
+  <tbody>
+  <tr>
+    <th>Type</th>
+    <th>Exponent</th>
+    <th>Fraction</th></tr>
+  <tr>
+    <td>Zeroes</td>
+    <td>0</td>
+    <td>0</td></tr>
+  <tr>
+    <td>Denormalized numbers</td>
+    <td>0</td>
+    <td>non zero</td></tr>
+  <tr>
+    <td>Normalized numbers</td>
+    <td><span class="texhtml">1</span> to <span class="texhtml">2<sup><i>e</i></sup> − 2</span></td>
+    <td>any</td></tr>
+  <tr>
+    <td>Infinities</td>
+    <td><span class="texhtml">2<sup><i>e</i></sup> − 1</span></td>
+    <td>0</td></tr>
+  <tr>
+    <td>NaNs</td>
+    <td><span class="texhtml">2<sup><i>e</i></sup> − 1</span></td>
+    <td>non zero</td></tr></tbody></table>
+<p><a id="Single-precision_32_bit" name="Single-precision_32_bit"></a></p>
+<h3><span class="editsection">[<a title="Edit section: Single-precision 32 bit" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=6">edit</a>]</span> 
+<span class="mw-headline">Single-precision 32 bit</span></h3>
+<p>A <a title="Single precision" href="http://en.wikipedia.org/wiki/Single_precision">single-precision</a> binary 
+floating-point number is stored in 32 <a title="Bit" href="http://en.wikipedia.org/wiki/Bit">bits</a>.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="WIDTH: 627px"><a class="image" title="Bit values for the the IEEE 754 32bit float 0.15625" href="http://en.wikipedia.org/wiki/Image:Float_example_frac.PNG"><img class="thumbimage" alt="Bit values for the the IEEE 754 32bit float 0.15625" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/Float_example_frac.png" border="0" height="107" width="625"></a> 
+<div class="thumbcaption">Bit values for the the IEEE 754 32bit float 
+0.15625</div></div></div>
+<p>The exponent is biased by <span class="texhtml">2<sup>8 − 1</sup> − 1 = 
+127</span> in this case (Exponents in the range −126 to +127 are representable. 
+See the above explanation to understand why biasing is done). An exponent of 
+−127 would be biased to the value 0 but this is reserved to encode that the 
+value is a denormalized number or zero. An exponent of 128 would be biased to 
+the value 255 but this is reserved to encode an infinity or not a number (NaN). 
+See the chart above.</p>
+<p>For normalised numbers, the most common, <i>exponent</i> is the biased 
+exponent and <i>fraction</i> is the <a title="Significand" href="http://en.wikipedia.org/wiki/Significand">significand</a> minus the most 
+significant bit.</p>
+<p>The number has value v:</p>
+<p>v = s × 2<sup>e</sup> × m</p>
+<p>Where</p>
+<p>s = +1 (positive numbers) when the sign bit is 0</p>
+<p>s = −1 (negative numbers) when the sign bit is 1</p>
+<p>e = Exp − 127 (in other words the exponent is stored with 127 added to it, 
+also called "biased with 127")</p>
+<p>m = 1.fraction in binary (that is, the significand is the binary number 1 
+followed by the radix point followed by the binary bits of the fraction). 
+Therefore, 1 ≤ m &lt; 2.</p>
+<p>In the example shown above, the sign is zero, the exponent is −3, and the 
+significand is 1.01 (in binary, which is 1.25 in decimal). The represented 
+number is therefore +1.25 × 2<sup>−3</sup>, which is +0.15625.</p>
+<p>Notes:</p>
+<ol>
+  <li>Denormalized numbers are the same except that e = −127 and m is 
+  0.fraction. (e is NOT −127&nbsp;: The fraction has to be shifted to the right 
+  by one more bit, in order to include the leading bit, which is not always 1 in 
+  this case. This is balanced by incrementing the exponent to −126 for the 
+  calculation.) 
+  </li><li>−126 is the smallest exponent for a normalized number 
+  </li><li>There are two Zeroes, +0 (s is 0) and <a title="−0 (number)" href="http://en.wikipedia.org/wiki/%C3%A2%C2%88%C2%920_%28number%29">−0</a> (s is 1) 
+  </li><li>There are two Infinities +∞ (s is 0) and −∞ (s is 1) 
+  </li><li>NaNs may have a sign and a fraction, but these have no meaning other than 
+  for diagnostics; the first bit of the fraction is often used to distinguish 
+  <i>signaling NaNs</i> from <i>quiet NaNs</i> 
+  </li><li>NaNs and Infinities have all 1s in the Exp field. 
+  </li><li>The positive and negative numbers closest to zero (represented by the 
+  denormalized value with all 0s in the Exp field and the binary value 1 in the 
+  Fraction field) are 
+  <dl>
+    <dd>±2<sup>−149</sup> ≈ ±1.4012985×10<sup>−45</sup> </dd></dl>
+  </li><li>The positive and negative normalized numbers closest to zero (represented 
+  with the binary value 1 in the Exp field and 0 in the fraction field) are 
+  <dl>
+    <dd>±2<sup>−126</sup> ≈ ±1.175494351×10<sup>−38</sup> </dd></dl>
+  </li><li>The finite positive and finite negative numbers furthest from zero 
+  (represented by the value with 254 in the Exp field and all 1s in the fraction 
+  field) are 
+  <dl>
+    <dd>±((1-(1/2)<sup>24</sup>)2<sup>128</sup>) <sup class="reference" id="_ref-Kahan_0"><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_note-Kahan">[1]</a></sup> 
+    ≈ ±3.4028235×10<sup>38</sup> </dd></dl></li></ol>
+<p>Here is the summary table from the previous section with some example 32-bit 
+single-precision examples:</p>
+<table class="wikitable">
+  <tbody>
+  <tr>
+    <th>Type</th>
+    <th>Sign</th>
+    <th>Exponent</th>
+    <th>Significand</th>
+    <th>Value</th></tr>
+  <tr>
+    <td>Zero</td>
+    <td align="center">0</td>
+    <td>0000 0000</td>
+    <td>000 0000 0000 0000 0000 0000</td>
+    <td>0.0</td></tr>
+  <tr>
+    <td>One</td>
+    <td align="center">0</td>
+    <td>0111 1111</td>
+    <td>000 0000 0000 0000 0000 0000</td>
+    <td>1.0</td></tr>
+  <tr>
+    <td>Minus one</td>
+    <td align="center">1</td>
+    <td>0111 1111</td>
+    <td>000 0000 0000 0000 0000 0000</td>
+    <td>–1.0</td></tr>
+  <tr>
+    <td>Small denormalized number</td>
+    <td align="center">*</td>
+    <td>0000 0000</td>
+    <td>000 0000 0000 0000 0000 0001</td>
+    <td>1.4×10<sup>-45</sup></td></tr>
+  <tr>
+    <td>Large denormalized number</td>
+    <td align="center">*</td>
+    <td>0000 0000</td>
+    <td>111 1111 1111 1111 1111 1111</td>
+    <td>1.18×10<sup>-38</sup></td></tr>
+  <tr>
+    <td>Large normalized number</td>
+    <td align="center">*</td>
+    <td>1111 1110</td>
+    <td>111 1111 1111 1111 1111 1111</td>
+    <td>3.4×10<sup>38</sup></td></tr>
+  <tr>
+    <td>Small normalized number</td>
+    <td align="center">*</td>
+    <td>0000 0001</td>
+    <td>000 0000 0000 0000 0000 0000</td>
+    <td>1.18×10<sup>-38</sup></td></tr>
+  <tr>
+    <td>Positive infinity</td>
+    <td align="center">0</td>
+    <td>1111 1111</td>
+    <td>000 0000 0000 0000 0000 0000</td>
+    <td><img class="tex" alt="+\infty" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/28cfe0a2608499ff5984a938e0d16d64.png"></td></tr>
+  <tr>
+    <td>Negative infinity</td>
+    <td align="center">1</td>
+    <td>1111 1111</td>
+    <td>000 0000 0000 0000 0000 0000</td>
+    <td><img class="tex" alt="-\infty" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/beab416080922c84a90ba092f7734fe5.png"></td></tr>
+  <tr>
+    <td>Not a number</td>
+    <td align="center">*</td>
+    <td>1111 1111</td>
+    <td>non zero</td>
+    <td>NaN</td></tr>
+  <tr>
+    <td colspan="5">* Sign bit can be either 0 or 1&nbsp;.</td></tr></tbody></table>
+<p><a id="A_more_complex_example" name="A_more_complex_example"></a></p>
+<h3><span class="editsection">[<a title="Edit section: A more complex example" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=7">edit</a>]</span> 
+<span class="mw-headline">A more complex example</span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="WIDTH: 602px"><a class="image" title="Bit values for the IEEE 754 32bit float -118.625" href="http://en.wikipedia.org/wiki/Image:Float_point_example_frac.svg"><img class="thumbimage" alt="Bit values for the IEEE 754 32bit float -118.625" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/600px-Float_point_example_frac.png" border="0" height="75" width="600"></a> 
+<div class="thumbcaption">Bit values for the IEEE 754 32bit float 
+-118.625</div></div></div>
+<p>The decimal number −118.625 is encoded using the IEEE 754 system as 
+follows:</p>
+<ol>
+  <li>The sign, the exponent, and the fraction are extracted from the original 
+  number. First, because the number is negative, the sign bit is "1". 
+  </li><li>Next, the number (without the sign; i.e., unsigned, no two's complement) 
+  is converted to <a title="Binary numeral system" href="http://en.wikipedia.org/wiki/Binary_numeral_system">binary notation</a>, 
+  giving 1110110.101. The 101 after the binary point has the value 0.625 because 
+  it is the sum of: 
+  <ol>
+    <li>0.5 (2<sup>−1</sup>) × 1, from the first digit after the binary point 
+    </li><li>0.25 (2<sup>−2</sup>) × 0, from the second digit 
+    </li><li>0.125 (2<sup>−3</sup>) × 1, from the third digit. </li></ol>
+  </li><li>That binary number is then <i>normalized</i>; that is, the binary point is 
+  moved left, leaving only a 1 to its left. The number of places it is moved 
+  gives the (power of two) exponent: 1110110.101 becomes 1.110110101 × 
+  2<sup>6</sup>. After this process, the first binary digit is always a 1, so it 
+  need not be included in the encoding. The rest is the part to the right of the 
+  binary point, which is then padded with zeros on the right to make 23 bits in 
+  all, which becomes the significand bits in the encoding: That is, 
+  11011010100000000000000. 
+  </li><li>The exponent is 6. This is encoded by converting it to binary and biassing 
+  it (so the most negative encodable exponent is 0, and all exponents are 
+  non-negative binary numbers). For the 32-bit IEEE 754 format, the bias is +127 
+  and so 6 + 127 = 133. In binary, this is encoded as 10000101. </li></ol>
+<p><a id="Double-precision_64_bit" name="Double-precision_64_bit"></a></p>
+<h3><span class="editsection">[<a title="Edit section: Double-precision 64 bit" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=8">edit</a>]</span> 
+<span class="mw-headline">Double-precision 64 bit</span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="WIDTH: 620px"><a class="image" title="The three fields in a 64bit IEEE 754 float" href="http://en.wikipedia.org/wiki/Image:General_double_precision_float_frac.PNG"><img class="thumbimage" alt="The three fields in a 64bit IEEE 754 float" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/General_double_precision_float_frac.png" border="0" height="125" width="618"></a> 
+<div class="thumbcaption">The three fields in a 64bit IEEE 754 
+float</div></div></div>
+<p><a title="Double precision" href="http://en.wikipedia.org/wiki/Double_precision">Double precision</a> is 
+essentially the same except that the fields are wider:</p>
+<p>The fraction part is much larger, while the exponent is only slightly larger. 
+The standard creators believed precision is more important than range.</p>
+<p>NaNs and Infinities are represented with Exp being all 1s (2047). If the 
+fraction part is all zero then it is Infinity, else it is NaN.</p>
+<p>For Normalized numbers the exponent bias is +1023 (so e is exponent (− 
+1023)). For Denormalized numbers the exponent is (−1022) (the minimum exponent 
+for a normalized number—it is not (−1023) because normalised numbers have a 
+leading 1 digit before the binary point and denormalized numbers do not). As 
+before, both infinity and zero are signed.</p>
+<p>Notes:</p>
+<ol>
+  <li>The positive and negative numbers closest to zero (represented by the 
+  denormalized value with all 0s in the Exp field and the binary value 1 in the 
+  Fraction field) are 
+  <dl>
+    <dd>±2<sup>−1074</sup> ≈ ±5×10<sup>−324</sup> </dd></dl>
+  </li><li>The positive and negative normalized numbers closest to zero (represented 
+  with the binary value 1 in the Exp field and 0 in the fraction field) are 
+  <dl>
+    <dd>±2<sup>−1022</sup> ≈ ±2.2250738585072020×10<sup>−308</sup> </dd></dl>
+  </li><li>The finite positive and finite negative numbers furthest from zero 
+  (represented by the value with 2046 in the Exp field and all 1s in the 
+  fraction field) are 
+  <dl>
+    <dd>±((1-(1/2)<sup>53</sup>)2<sup>1024</sup>) <sup class="reference" id="_ref-Kahan_1"><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_note-Kahan">[1]</a></sup> 
+    ≈ ±1.7976931348623157×10<sup>308</sup> </dd></dl></li></ol>
+<p><a id="Comparing_floating-point_numbers" name="Comparing_floating-point_numbers"></a></p>
+<h2><span class="editsection">[<a title="Edit section: Comparing floating-point numbers" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=9">edit</a>]</span> 
+<span class="mw-headline">Comparing floating-point numbers</span></h2>
+<p>Every possible bit combination is either a NaN or a number with a unique 
+value in the <a title="Affinely extended real number system" href="http://en.wikipedia.org/wiki/Affinely_extended_real_number_system">affinely 
+extended real number system</a> with its associated order, except for the two 
+bit combinations negative zero and positive zero, which sometimes require 
+special attention (see below). The binary representation has the special 
+property that, excluding NaNs, any two numbers can be compared like <a title="Sign and magnitude" href="http://en.wikipedia.org/wiki/Sign_and_magnitude">sign and magnitude</a> 
+integers (although with modern computer processors this is no longer directly 
+applicable): if the sign bit is different, the negative number precedes the 
+positive number (except that negative zero and positive zero should be 
+considered equal), otherwise, relative order is the same as <a title="Lexicographical order" href="http://en.wikipedia.org/wiki/Lexicographical_order">lexicographical 
+order</a> but inverted for two negative numbers; <a title="Endianness" href="http://en.wikipedia.org/wiki/Endianness">endianness</a> issues apply.</p>
+<p>Floating-point arithmetic is subject to rounding that may affect the outcome 
+of comparisons on the results of the computations.</p>
+<p>Although negative zero and positive zero are generally considered equal for 
+comparison purposes, some <a title="Programming language" href="http://en.wikipedia.org/wiki/Programming_language">programming 
+language</a> <a title="Relational operator" href="http://en.wikipedia.org/wiki/Relational_operator">relational operators</a> 
+and similar constructs might or do treat them as distinct. According to the <a title="Java (programming language)" href="http://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a> 
+Language Specification<a class="external autonumber" title="http://java.sun.com/docs/books/jls/" href="http://java.sun.com/docs/books/jls/" rel="nofollow">[2]</a>, comparison and 
+equality operators treat them as equal, but Math.min() and Math.max() 
+distinguish them (officially starting with Java version 1.1 but actually with 
+1.1.1), as do the comparison methods equals(), compareTo() and even compare() of 
+classes Float and Double. For <a title="C++" href="http://en.wikipedia.org/wiki/C++">C++</a>, the standard does not have 
+anything to say on the subject, so it is important to verify this (one 
+environment tested treated them as equal when using a floating-point variable 
+and treated them as distinct and with negative zero preceding positive zero when 
+comparing floating-point literals).</p>
+<p><a id="Rounding_floating-point_numbers" name="Rounding_floating-point_numbers"></a></p>
+<h2><span class="editsection">[<a title="Edit section: Rounding floating-point numbers" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=10">edit</a>]</span> 
+<span class="mw-headline">Rounding floating-point numbers</span></h2>
+<p>The IEEE standard has four different rounding modes; the first is the 
+default; the others are called <i><a title="Directed rounding" href="http://en.wikipedia.org/wiki/Directed_rounding">directed 
+roundings</a></i>.</p>
+<ul>
+  <li><b>Round to Nearest</b> – rounds to the nearest value; if the number falls 
+  midway it is rounded to the nearest value with an even (zero) least 
+  significant bit, which occurs 50% of the time (in <a title="IEEE 754r" href="http://en.wikipedia.org/wiki/IEEE_754r">IEEE 754r</a> this mode is 
+  called <i>roundTiesToEven</i> to distinguish it from another round-to-nearest 
+  mode) 
+  </li><li><b>Round toward 0</b> – directed rounding towards zero 
+  </li><li><b>Round toward <img class="tex" alt="+\infty" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/28cfe0a2608499ff5984a938e0d16d64.png"></b> – 
+  directed rounding towards positive infinity 
+  </li><li><b>Round toward <img class="tex" alt="-\infty" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/beab416080922c84a90ba092f7734fe5.png"></b> – 
+  directed rounding towards negative infinity. </li></ul>
+<p><a id="Extending_the_real_numbers" name="Extending_the_real_numbers"></a></p>
+<h2><span class="editsection">[<a title="Edit section: Extending the real numbers" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=11">edit</a>]</span> 
+<span class="mw-headline">Extending the real numbers</span></h2>
+<p>The IEEE standard employs (and extends) the <a title="Affinely extended real number system" href="http://en.wikipedia.org/wiki/Affinely_extended_real_number_system">affinely 
+extended real number system</a>, with separate positive and negative infinities. 
+During drafting, there was a proposal for the standard to incorporate the <a title="Projectively extended real number system" href="http://en.wikipedia.org/wiki/Projectively_extended_real_number_system">projectively 
+extended real number system</a>, with a single unsigned infinity, by providing 
+programmers with a mode selection option. In the interest of reducing the 
+complexity of the final standard, the projective mode was dropped, however. The 
+<a title="Intel 8087" href="http://en.wikipedia.org/wiki/Intel_8087">Intel 
+8087</a> and <a title="Intel 80287" href="http://en.wikipedia.org/wiki/Intel_80287">Intel 80287</a> <a title="Floating point" href="http://en.wikipedia.org/wiki/Floating_point">floating point</a> <a title="Co-processor" href="http://en.wikipedia.org/wiki/Co-processor">co-processors</a> both support 
+this projective mode.<sup class="reference" id="_ref-0"><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_note-0">[2]</a></sup><sup class="reference" id="_ref-1"><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_note-1">[3]</a></sup><sup class="reference" id="_ref-2"><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_note-2">[4]</a></sup></p>
+<p><a id="Recommended_functions_and_predicates" name="Recommended_functions_and_predicates"></a></p>
+<h2><span class="editsection">[<a title="Edit section: Recommended functions and predicates" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=12">edit</a>]</span> 
+<span class="mw-headline">Recommended functions and predicates</span></h2>
+<ul>
+  <li>Under some C compilers, copysign(x,y) returns x with the sign of y, so 
+  abs(x) equals copysign(x,1.0). This is one of the few operations which 
+  operates on a NaN in a way resembling arithmetic. The function copysign is new 
+  in the C99 standard. 
+  </li><li>−x returns x with the sign reversed. This is different from 0−x in some 
+  cases, notably when x is 0. So −(0) is −0, but the sign of 0−0 depends on the 
+  rounding mode. 
+  </li><li>scalb (y, N) 
+  </li><li>logb (x) 
+  </li><li>finite (x) a <a title="Predicate (mathematics)" href="http://en.wikipedia.org/wiki/Predicate_%28mathematics%29">predicate</a> for 
+  "x is a finite value", equivalent to −Inf &lt; x &lt; Inf 
+  </li><li>isnan (x) a predicate for "x is a nan", equivalent to "x ≠ x" 
+  </li><li>x &lt;&gt; y which turns out to have different exception behavior than 
+  NOT(x = y). 
+  </li><li>unordered (x, y) is true when "x is unordered with y", i.e., either x or y 
+  is a NaN. 
+  </li><li>class (x) 
+  </li><li>nextafter(x,y) returns the next representable value from x in the 
+  direction towards y </li></ul>
+<p><a id="References" name="References"></a></p>
+<h2><span class="editsection">[<a title="Edit section: References" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=13">edit</a>]</span> 
+<span class="mw-headline">References</span></h2>
+<div class="references-small">
+<ol class="references">
+  <li id="_note-Kahan">^ <a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_ref-Kahan_0"><sup><i><b>a</b></i></sup></a> 
+  <a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_ref-Kahan_1"><sup><i><b>b</b></i></sup></a> 
+  <a title="William Kahan" href="http://en.wikipedia.org/wiki/William_Kahan">Prof. W. Kahan</a>. "<i><a class="external text" title="http://www.cs.berkeley.edu/~wkahan/ieee754status/IEEE754.PDF" href="http://www.cs.berkeley.edu/%7Ewkahan/ieee754status/IEEE754.PDF" rel="nofollow">Lecture Notes on the Status of IEEE 754</a></i>" (<a title="PDF" href="http://en.wikipedia.org/wiki/PDF">PDF</a>). October 1, 1997 3:36 am. 
+  Elect. Eng. &amp; Computer Science University of California. Retrieved on <a title="2007" href="http://en.wikipedia.org/wiki/2007">2007</a>-<a title="April 12" href="http://en.wikipedia.org/wiki/April_12">04-12</a>. 
+  </li><li id="_note-0"><b><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_ref-0">^</a></b> 
+  <cite style="FONT-STYLE: normal">John R. Hauser (March 1996). "<a class="external text" title="http://cch.loria.fr/documentation/IEEE754/ACM/hauser.pdf" href="http://cch.loria.fr/documentation/IEEE754/ACM/hauser.pdf" rel="nofollow">Handling Floating-Point Exceptions in Numeric Programs</a>" 
+  (PDF). <i>ACM Transactions on Programming Languages and Systems</i> <b>18</b> 
+  (2).</cite> 
+  </li><li id="_note-1"><b><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_ref-1">^</a></b> 
+  <cite style="FONT-STYLE: normal">David Stevenson (March 1981). "IEEE Task 
+  P754: A proposed standard for binary floating-point arithmetic". 
+  <i>Computer</i> <b>14</b> (3): 51–62.</cite> 
+  </li><li id="_note-2"><b><a title="" href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard#_ref-2">^</a></b> 
+  <cite style="FONT-STYLE: normal">Kahan, W. and Palmer, J. (1979). "On a 
+  proposed floating-point standard". <i>SIGNUM Newsletter</i> <b>14</b> 
+  (Special): 13–21.</cite> </li></ol></div>
+<ul>
+  <li><a class="external text" title="http://www.opencores.org/projects.cgi/web/fpu100/fpu_doc.pdf" href="http://www.opencores.org/projects.cgi/web/fpu100/fpu_doc.pdf" rel="nofollow">Floating Point Unit</a> by Jidan Al-Eryani </li></ul>
+<p><a id="Revision_of_the_standard" name="Revision_of_the_standard"></a></p>
+<h2><span class="editsection">[<a title="Edit section: Revision of the standard" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=14">edit</a>]</span> 
+<span class="mw-headline">Revision of the standard</span></h2>
+<p>Note that the IEEE 754 standard is <a title="As of 2008" href="http://en.wikipedia.org/wiki/As_of_2008">currently</a> under revision. 
+See: <a title="IEEE 754r" href="http://en.wikipedia.org/wiki/IEEE_754r">IEEE 
+754r</a></p>
+<p><a id="See_also" name="See_also"></a></p>
+<h2><span class="editsection">[<a title="Edit section: See also" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=15">edit</a>]</span> 
+<span class="mw-headline">See also</span></h2>
+<ul>
+  <li><a title="Minifloat" href="http://en.wikipedia.org/wiki/Minifloat">minifloat</a> for simple 
+  examples of properties of IEEE 754 floating point numbers 
+  </li><li><a title="−0 (number)" href="http://en.wikipedia.org/wiki/%C3%A2%C2%88%C2%920_%28number%29">−0</a> (negative zero) 
+  </li><li><a title="IEEE 754r" href="http://en.wikipedia.org/wiki/IEEE_754r">IEEE 
+  754r</a> working group to revise IEEE 754-1985. 
+  </li><li><a title="Intel 8087" href="http://en.wikipedia.org/wiki/Intel_8087">Intel 
+  8087</a> (early implementation effort) 
+  </li><li><a title="Q (number format)" href="http://en.wikipedia.org/wiki/Q_%28number_format%29">Q (number format)</a> 
+  For constant resolution </li></ul>
+<p><a id="External_links" name="External_links"></a></p>
+<h2><span class="editsection">[<a title="Edit section: External links" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=16">edit</a>]</span> 
+<span class="mw-headline">External links</span></h2>
+<ul>
+  <li><a class="external text" title="http://babbage.cs.qc.edu/courses/cs341/IEEE-754references.html" href="http://babbage.cs.qc.edu/courses/cs341/IEEE-754references.html" rel="nofollow">IEEE 754 references</a> 
+  </li><li><a class="external text" title="http://www2.hursley.ibm.com/decimal/854mins.html" href="http://www2.hursley.ibm.com/decimal/854mins.html" rel="nofollow">IEEE 
+  854-1987</a> History and minutes 
+  </li><li><a class="external text" title="http://docs.sun.com/source/806-3568/ncg_goldberg.html" href="http://docs.sun.com/source/806-3568/ncg_goldberg.html" rel="nofollow">What 
+  Every Computer Scientist Should Know About Floating-Point Arithmetic</a> by 
+  David Goldberg - an introduction and explanation 
+  </li><li><a class="external text" title="http://www.cs.berkeley.edu/~wkahan/ieee754status/754story.html" href="http://www.cs.berkeley.edu/%7Ewkahan/ieee754status/754story.html" rel="nofollow">An Interview with the Old Man of Floating-Point</a> 
+  </li><li><a class="external text" title="http://hal.archives-ouvertes.fr/hal-00128124" href="http://hal.archives-ouvertes.fr/hal-00128124" rel="nofollow">A compendium 
+  of non-intuitive behaviours of floating-point on popular architectures</a>, 
+  with implications for program verification and testing 
+  </li><li><a class="external text" title="http://www.d6.com/users/checker/pdfs/gdmfp.pdf" href="http://www.d6.com/users/checker/pdfs/gdmfp.pdf" rel="nofollow">Let's Get 
+  To The (Floating) Point</a> by Chris Hecker 
+  </li><li><a class="external text" title="http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm" href="http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm" rel="nofollow">Comparing floats</a> 
+  </li><li><a class="external text" title="http://www.coprocessor.info/" href="http://www.coprocessor.info/" rel="nofollow">Coprocessor.info&nbsp;: x87 
+  FPU pictures, development and manufacturer information</a> </li></ul>
+<p><a id="Converters_.28decimal_.E2.86.94_754_format.2C_etc..29" name="Converters_.28decimal_.E2.86.94_754_format.2C_etc..29"></a></p>
+<h3><span class="editsection">[<a title="Edit section: Converters (decimal &amp;harr; 754 format, etc.)" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit&amp;section=17">edit</a>]</span> 
+<span class="mw-headline">Converters (decimal ↔ 754 format, etc.)</span></h3>
+<ul>
+  <li><a class="external text" title="http://www.rit.edu/~meseec/eecc250-winter99/IEEE-754hex32.html" href="http://www.rit.edu/%7Emeseec/eecc250-winter99/IEEE-754hex32.html" rel="nofollow">Web Based Converter</a> 
+  </li><li><a class="external text" title="http://babbage.cs.qc.edu/courses/cs341/IEEE-754.html" href="http://babbage.cs.qc.edu/courses/cs341/IEEE-754.html" rel="nofollow">Another Web Based Converter</a> 
+  </li><li><a class="external text" title="http://www.think-silicon.com/ipgenius.php?module=fp_conv" href="http://www.think-silicon.com/ipgenius.php?module=fp_conv" rel="nofollow">Web Based Verilog Circuit Converter</a> 
+  </li><li><a class="external text" title="http://www.h-schmidt.net/FloatApplet/IEEE754.html" href="http://www.h-schmidt.net/FloatApplet/IEEE754.html" rel="nofollow">Java 
+  Applet Converter</a> 
+  </li><li><a class="external text" title="http://www.61131.com/download.htm" href="http://www.61131.com/download.htm" rel="nofollow">Converter as MS-Windows 
+  program</a> 
+  </li><li><a class="external text" title="http://handyscript.wz.cz/files/ieee754.htm" href="http://handyscript.wz.cz/files/ieee754.htm" rel="nofollow">Understanding 
+  IEEE 754 - "Try it yourself"</a> </li></ul><!-- 
+Pre-expand include size: 21841/2048000 bytes
+Post-expand include size: 5813/2048000 bytes
+Template argument size: 4141/2048000 bytes
+#ifexist count: 0/500
+--><!-- Saved in parser cache with key enwiki:pcache:idhash:15189-0!1!0!default!!en!2 and timestamp 20080121053447 -->
+<div class="printfooter">Retrieved from "<a href="http://en.wikipedia.org/wiki/IEEE_754-1985">http://en.wikipedia.org/wiki/IEEE_754-1985</a>"</div>
+<div id="catlinks">
+<p class="catlinks"><a title="Special:Categories" href="http://en.wikipedia.org/wiki/Special:Categories">Categories</a>: <span dir="ltr"><a title="Category:Computer arithmetic" href="http://en.wikipedia.org/wiki/Category:Computer_arithmetic">Computer 
+arithmetic</a></span> | <span dir="ltr"><a title="Category:IEEE standards" href="http://en.wikipedia.org/wiki/Category:IEEE_standards">IEEE 
+standards</a></span></p></div><!-- end content -->
+<div class="visualClear"></div></div></div></div>
+<div id="column-one">
+<div class="portlet" id="p-cactions">
+<h5>Views</h5>
+<div class="pBody">
+<ul>
+  <li class="selected" id="ca-nstab-main"><a title="View the content page [alt-c]" accesskey="c" href="http://en.wikipedia.org/wiki/IEEE_754-1985">Article</a> 
+  </li><li id="ca-talk"><a title="Discussion about the content page [alt-t]" accesskey="t" href="http://en.wikipedia.org/wiki/Talk:IEEE_754-1985">Discussion</a> 
+  </li><li id="ca-edit"><a title="You can edit this page. Please use the preview button before saving. [alt-e]" accesskey="e" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=edit">Edit 
+  this page</a> 
+  </li><li id="ca-history"><a title="Past versions of this page [alt-h]" accesskey="h" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;action=history">History</a> 
+  </li></ul></div></div>
+<div class="portlet" id="p-personal">
+<h5>Personal tools</h5>
+<div class="pBody">
+<ul>
+  <li id="pt-login"><a title="You are encouraged to log in; however, it is not mandatory. [alt-o]" accesskey="o" href="http://en.wikipedia.org/w/index.php?title=Special:Userlogin&amp;returnto=IEEE_754-1985">Sign 
+  in / create account</a> </li></ul></div></div>
+<div class="portlet" id="p-logo"><a title="Visit the main page [alt-z]" style="BACKGROUND-IMAGE: url(/images/wiki-en.png)" accesskey="z" href="http://en.wikipedia.org/wiki/Main_Page"></a></div>
+<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+
+<div class="portlet" id="p-navigation">
+<h5>Navigation</h5>
+<div class="pBody">
+<ul>
+  <li id="n-mainpage"><a title="Visit the main page [alt-z]" accesskey="z" href="http://en.wikipedia.org/wiki/Main_Page">Main Page</a> 
+  </li><li id="n-Contents"><a title="Guides to browsing Wikipedia" href="http://en.wikipedia.org/wiki/Portal:Contents">Contents</a> 
+  </li><li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content">Featured 
+  content</a> 
+  </li><li id="n-currentevents"><a title="Find background information on current events" href="http://en.wikipedia.org/wiki/Portal:Current_events">Current events</a> 
+  </li><li id="n-randompage"><a title="Load a random article [alt-x]" accesskey="x" href="http://en.wikipedia.org/wiki/Special:Random">Random article</a> 
+</li></ul></div></div>
+<div class="portlet" id="p-interaction">
+<h5>interaction</h5>
+<div class="pBody">
+<ul>
+  <li id="n-About-Wikipedia"><a title="Find out about Wikipedia" href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</a> 
+  </li><li id="n-portal"><a title="About the project, what you can do, where to find things" href="http://en.wikipedia.org/wiki/Wikipedia:Community_Portal">Community 
+  portal</a> 
+  </li><li id="n-recentchanges"><a title="The list of recent changes in the wiki [alt-r]" accesskey="r" href="http://en.wikipedia.org/wiki/Special:Recentchanges">Recent 
+  changes</a> 
+  </li><li id="n-contact"><a title="How to contact Wikipedia" href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a> 
+
+  </li><li id="n-sitesupport"><a title="Support us" href="http://wikimediafoundation.org/wiki/Donate">Donate to Wikipedia</a> 
+  </li><li id="n-help"><a title="Guidance on how to use and edit Wikipedia" href="http://en.wikipedia.org/wiki/Help:Contents">Help</a> 
+</li></ul></div></div>
+<div class="portlet" id="p-search">
+<h5><label for="searchInput">Search</label></h5>
+<div class="pBody" id="searchBody">
+<form id="searchform" action="/wiki/Special:Search">
+<div><input id="searchInput" title="Search Wikipedia [alt-f]" accesskey="f" name="search"> 
+<input class="searchButton" id="searchGoButton" title="Go to a page with this exact name if one exists" value="Go" name="go" type="submit">&nbsp; 
+<input class="searchButton" id="mw-searchButton" title="Search the wiki for this text" value="Search" name="fulltext" type="submit"> 
+</div></form></div></div>
+<div class="portlet" id="p-tb">
+<h5>Toolbox</h5>
+<div class="pBody">
+<ul>
+  <li id="t-whatlinkshere"><a title="List of all English Wikipedia pages that link here [alt-j]" accesskey="j" href="http://en.wikipedia.org/wiki/Special:Whatlinkshere/IEEE_754-1985">What 
+  links here</a> 
+  </li><li id="t-recentchangeslinked"><a title="Recent changes in pages linked from this page [alt-k]" accesskey="k" href="http://en.wikipedia.org/wiki/Special:Recentchangeslinked/IEEE_754-1985">Related 
+  changes</a> 
+  </li><li id="t-upload"><a title="Upload images or media files [alt-u]" accesskey="u" href="http://en.wikipedia.org/wiki/Wikipedia:Upload">Upload file</a> 
+  </li><li id="t-specialpages"><a title="List of all special pages [alt-q]" accesskey="q" href="http://en.wikipedia.org/wiki/Special:Specialpages">Special pages</a> 
+  </li><li id="t-print"><a title="Printable version of this page [alt-p]" accesskey="p" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;printable=yes">Printable 
+  version</a> 
+  </li><li id="t-permalink"><a title="Permanent link to this version of the page" href="http://en.wikipedia.org/w/index.php?title=IEEE_754-1985&amp;oldid=185803175">Permanent 
+  link</a>
+  </li><li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=IEEE_754-1985&amp;id=185803175">Cite 
+  this page</a> </li></ul></div></div>
+<div class="portlet" id="p-lang">
+<h5>Languages</h5>
+<div class="pBody">
+<ul>
+  <li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/IEEE_754">Català</a> 
+  </li><li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/IEEE_754">Česky</a> 
+  </li><li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/IEEE_754">Deutsch</a> 
+  </li><li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/IEEE_punto_flotante">Español</a> 
+  </li><li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/IEEE_754">Français</a> 
+  </li><li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/IEEE_754">한국어</a> 
+
+  </li><li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/IEEE_754">Italiano</a> 
+  </li><li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/IEEE_lebeg%C3%85%C2%91pontos_sz%C3%83%C2%A1mform%C3%83%C2%A1tum">Magyar</a> 
+
+  </li><li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/IEEE_754">日本語</a> 
+
+  </li><li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/IEEE_754">Polski</a> 
+  </li><li class="interwiki-sr"><a href="http://sr.wikipedia.org/wiki/IEEE_754">Српски 
+  / Srpski</a> 
+  </li><li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/IEEE_754">中文</a> 
+  </li><li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/IEEE_754">Türkçe</a> 
+</li></ul></div></div></div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img alt="Powered by MediaWiki" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/poweredby_mediawiki_88x31.png"></a></div>
+<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img alt="Wikimedia Foundation" src="4_IEEE%20754-1985%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikimedia-button.png" border="0"></a></div>
+<ul id="f-list">
+  <li id="lastmod">This page was last modified 00:29, 16 January 2008. 
+  </li><li id="copyright">All text is available under the terms of the <a class="internal" title="Wikipedia:Text of the GNU Free Documentation License" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License">GNU 
+  Free Documentation License</a>. (See <b><a class="internal" title="Wikipedia:Copyrights" href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights">Copyrights</a></b> 
+  for details.) <br>Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc</a>., a 
+  U.S. registered <a class="internal" title="501(c)(3)" href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29">501(c)(3)</a> <a href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</a> 
+  <a class="internal" title="Non-profit organization" href="http://en.wikipedia.org/wiki/Non-profit_organization">nonprofit</a> <a title="Charitable organization" href="http://en.wikipedia.org/wiki/Charitable_organization">charity</a>.<br>
+  </li><li id="privacy"><a title="wikimedia:Privacy policy" href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy policy</a> 
+  </li><li id="about"><a title="Wikipedia:About" href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</a> 
+  </li><li id="disclaimer"><a title="Wikipedia:General disclaimer" href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer">Disclaimers</a> 
+  </li></ul></div>
+<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div><!-- Served by srv149 in 0.065 secs. -->
+</body></html>
