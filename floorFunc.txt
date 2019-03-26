@@ -1,0 +1,267 @@
+//-------CONFIGURATION
+name: floor function
+init: qinit
+accept: qend
+
+//-------Syntax:
+//[current_state],[read_symbol]
+//[new_state],[write_symbol],[>|<|-]
+
+// < = left
+// > = right
+// - = hold
+
+// Estados iniciales hasta encontrar el primer *
+qinit,0
+qinit,0,>
+
+qinit, *
+q1, *, >
+
+// Duplicar n
+
+// Buscas el final del divisor
+q1,1
+q1,1,>
+
+// Encuentras el final del divisor y marcas la diferencia con un #
+q1,0
+q15,#,<
+
+//Comienza la copia del divisor
+q11,1
+q17,0,<
+
+q17,1
+q17,1,<
+
+q17,*
+q12,*,<
+
+// Copias y marcas el final del divisor con un #
+q12,1
+q12,1,<
+
+q12,#
+q14,1,<
+
+q12,0
+q14,1,<
+
+// Marcas el final/inicio del divisor duplicado
+q14,0
+q13,#,>
+
+q13,*
+q13,*,>
+
+q13,1
+q13,1,>
+
+q13,0
+q13,0,>
+
+//Llegas al final del divisor y repites los ciclos
+q13,#
+q15,#,<
+
+q15,0
+q15,0,<
+
+q15,1
+q11,1,-
+
+//Se termina el divisor y se vuelve a rellenar para no perder el número
+q15,*
+q16,*,>
+
+q16,0
+q16,1,>
+
+q16,#
+q20,#,>
+
+//Comienza la división
+
+//Se borra un 1 para copiarlo al final del dividendo
+q20,1
+q21,0,>
+
+q20,0
+q20,0,>
+
+//Se terminó el dividendo
+q20,*
+q40,*,<
+
+//Se recorre todo el número hasta el final
+q21,1
+q21,1,>
+
+q21,*
+q21,*,>
+
+//Se copia el dígito y se marca el final con un #
+q21,0
+q22,1,>
+
+q21,#
+q22,1,>
+
+q22,0
+q23,#,<
+
+//Se recorre todo el número hasta el divisor
+q23,1
+q23,1,<
+
+q23,*
+q23,*,<
+
+q23,0
+q23,0,<
+
+q23,#
+q24,#,<
+
+//Se recorre todo el número hasta la copia del divisor
+q24,1
+q24,1,<
+
+q24,0
+q24,0,<
+
+q24,*
+q24,*,<
+
+//Se llega al final de la copia del divisor
+q24,#
+q25,#,>
+
+//Se borra un 1 del divisor y se recorre hasta el dividendo
+q25,1
+q26,0,>
+
+q25,0
+q25,0,>
+
+q25,*
+q30,*,<
+
+q26,1
+q26,1,>
+
+q26,*
+q26,*,>
+
+//Comienza la lectura del dividendo
+q26,#
+q27,#,>
+
+q27,0
+q27,0,>
+
+q27,1
+q27,1,>
+
+//Se llega al final del dividendo y se busca un 1 para borrarlo
+q27,*
+q28,*,<
+
+q28,1
+q28,1,<
+
+//Se encuentra el final del dividendo
+q28,0
+q29,0,>
+
+//Se borra un 1 y se recorre de nuevo todo el número hasta el dividendo
+q29,1
+q23,0,>
+
+//Se terminó el divisor y se pasa a la etapa final
+q29,*
+q40,*,<
+
+// Reiniciar el ciclo cuando el divisor es mayor que el dividendo
+
+//Se rellena la copia del divisor
+q30,0
+q30,1,<
+
+q30,#
+q31,#,>
+
+//Se recorre todo el número hasta el final del dividendo
+q31,1
+q31,1,>
+
+q31,*
+q31,*,>
+
+q31,#
+q32,#,>
+
+q32,0
+q32,0,>
+
+//Se acabó el dividendo y se pasa a la etapa final
+q32,*
+q40,*,<
+
+//Existe dividendo y se reinicia el ciclo
+q32,1
+q33,1,<
+
+q33,0
+q20,1,<
+
+//Etapa final
+
+//Se borran todos los datos
+q40,0
+q40,0,<
+
+q40,#
+q40,0,<
+
+q40,1
+q40,0,<
+
+//Marca para indicar que se terminó el dato inicial
+q40,*
+q41,0,<
+
+q41,1
+q41,0,<
+
+q41,0
+q41,0,<
+
+q41,#
+q42,0,>
+
+//Se llegó al final de la copia del divisor y ya fue borrado
+q42,0
+q42,0,>
+
+//Se llega al inicio del resultado
+q42,*
+q42,*,>
+
+//Se recorre el resultado para poner la marca final
+q42,1
+q42,1,>
+
+q42,#
+q43,1,>
+
+q43,0
+q43,*,<
+
+//Se recorre para poner el apuntador en el primer dígito
+q43,1
+q43,1,<
+
+q43,*
+qend,*,>
